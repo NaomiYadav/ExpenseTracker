@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .demo-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: transform 0.2s ease;
+        }
+        .demo-btn:hover {
+            transform: translateY(-2px);
+        }
+        .features {
+            text-align: left;
+            margin: 30px 0;
+        }
+        .features h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🏦 Personal Expense Tracker</h1>
+        <p>A modern web application for tracking your income and expenses with real-time calculations and beautiful UI.</p>
+        
+        <div class="features">
+            <h3>🚀 Key Features</h3>
+            <ul>
+                <li>Add income and expense transactions</li>
+                <li>Categorize transactions for better organization</li>
+                <li>Real-time calculation of totals and balance</li>
+                <li>Filter transactions by type and category</li>
+                <li>Responsive design for all devices</li>
+                <li>Local storage for data persistence</li>
+                <li>Export data to CSV format</li>
+                <li>Modern, intuitive user interface</li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="index.html" class="demo-btn">🚀 Launch Application</a>
+            <a href="https://github.com" class="demo-btn">📂 View Source Code</a>
+        </div>
+
+        <p style="margin-top: 30px; color: #666; font-size: 0.9rem;">
+            Built with HTML5, CSS3, and Vanilla JavaScript<br>
+            Perfect for B.Tech students and internship portfolios
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+  "name": "personal-expense-tracker",
+  "version": "1.0.0",
+  "description": "A modern web application for tracking personal income and expenses built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "test": "echo \"Testing functionality manually - see TESTING_CHECKLIST.md\"",
+    "build": "echo \"No build process needed for vanilla HTML/CSS/JS\"",
+    "serve": "python -m http.server 3000"
+  },
+  "keywords": [
+    "expense-tracker",
+    "finance",
+    "budget",
+    "money-management",
+    "javascript",
+    "html5",
+    "css3",
+    "responsive",
+    "web-app",
+    "internship-project",
+    "frontend",
+    "vanilla-js"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://your-portfolio.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/expense-tracker.git"
+  },
+  "homepage": "https://yourusername.github.io/expense-tracker",
+  "bugs": {
+    "url": "https://github.com/yourusername/expense-tracker/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "features": [
+    "Real-time expense and income tracking",
+    "Transaction categorization with 16+ categories",
+    "Responsive design for all devices",
+    "Local storage for data persistence",
+    "Advanced filtering and search capabilities",
+    "CSV export functionality",
+    "Modern UI with smooth animations",
+    "Form validation and error handling",
+    "Toast notifications for user feedback",
+    "Confirmation modals for destructive actions"
+  ],
+  "techStack": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript ES6+"
+    ],
+    "styling": [
+      "CSS Grid",
+      "Flexbox",
+      "CSS Animations",
+      "Responsive Design"
+    ],
+    "apis": [
+      "Local Storage API",
+      "DOM API",
+      "File API"
+    ],
+    "libraries": [
+      "Font Awesome (Icons)",
+      "Google Fonts (Typography)"
+    ]
+  },
+  "projectStructure": {
+    "index.html": "Main application file with semantic HTML structure",
+    "styles.css": "Complete CSS styling with responsive design",
+    "script.js": "JavaScript functionality with ES6+ features",
+    "demo.html": "Project demo and feature showcase page",
+    "README.md": "Comprehensive project documentation",
+    "INTERNSHIP_GUIDE.md": "Guide for internship presentation",
+    "TESTING_CHECKLIST.md": "Testing checklist for quality assurance"
+  },
+  "internshipReady": true,
+  "bTechLevel": "3rd Year",
+  "skillsDemo": [
+    "Frontend Development",
+    "Responsive Web Design",
+    "JavaScript Programming",
+    "User Experience Design",
+    "Code Organization",
+    "Problem Solving",
+    "Documentation"
+  ]
+}
