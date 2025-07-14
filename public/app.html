@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-wallet"></i> Personal Expense Tracker</h1>
+            <p>Manage your finances with ease</p>
+        </header>
+
+        <!-- Summary Cards -->
+        <div class="summary-section">
+            <div class="summary-card income">
+                <div class="card-header">
+                    <i class="fas fa-arrow-up"></i>
+                    <h3>Total Income</h3>
+                </div>
+                <div class="amount" id="total-income">₹0.00</div>
+            </div>
+            
+            <div class="summary-card expense">
+                <div class="card-header">
+                    <i class="fas fa-arrow-down"></i>
+                    <h3>Total Expenses</h3>
+                </div>
+                <div class="amount" id="total-expenses">₹0.00</div>
+            </div>
+            
+            <div class="summary-card balance">
+                <div class="card-header">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Balance</h3>
+                </div>
+                <div class="amount" id="balance">₹0.00</div>
+            </div>
+        </div>
+
+        <!-- Transaction Form -->
+        <div class="form-section">
+            <h2><i class="fas fa-plus-circle"></i> Add New Transaction</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="transaction-type">Transaction Type</label>
+                    <select id="transaction-type" required>
+                        <option value="">Select Type</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" placeholder="Enter description" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount (₹)</label>
+                    <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <!-- Income Categories -->
+                        <optgroup label="Income Categories" id="income-categories" style="display: none;">
+                            <option value="salary">Salary</option>
+                            <option value="freelance">Freelance</option>
+                            <option value="business">Business</option>
+                            <option value="investment">Investment</option>
+                            <option value="gift">Gift</option>
+                            <option value="other-income">Other Income</option>
+                        </optgroup>
+                        <!-- Expense Categories -->
+                        <optgroup label="Expense Categories" id="expense-categories" style="display: none;">
+                            <option value="food">Food & Dining</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="bills">Bills & Utilities</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="travel">Travel</option>
+                            <option value="groceries">Groceries</option>
+                            <option value="other-expense">Other Expense</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add Transaction
+                </button>
+            </form>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3><i class="fas fa-filter"></i> Filter Transactions</h3>
+            <div class="filter-controls">
+                <select id="filter-type">
+                    <option value="all">All Transactions</option>
+                    <option value="income">Income Only</option>
+                    <option value="expense">Expenses Only</option>
+                </select>
+                
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                </select>
+                
+                <button id="clear-filters" class="btn-secondary">
+                    <i class="fas fa-times"></i> Clear Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Transactions List -->
+        <div class="transactions-section">
+            <div class="section-header">
+                <h2><i class="fas fa-list"></i> Transaction History</h2>
+                <button id="clear-all" class="btn-danger">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+            
+            <div class="transactions-container">
+                <div id="no-transactions" class="no-transactions">
+                    <i class="fas fa-receipt"></i>
+                    <p>No transactions yet. Add your first transaction above!</p>
+                </div>
+                <div id="transactions-list" class="transactions-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-exclamation-triangle"></i> Confirm Delete</h3>
+            <p>Are you sure you want to delete this transaction?</p>
+            <div class="modal-actions">
+                <button id="confirm-delete" class="btn-danger">Delete</button>
+                <button id="cancel-delete" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
